@@ -3163,6 +3163,10 @@ body.screenshot {
 	margin-left: auto;
 	margin-right: auto;
 }
+.hexagon{
+	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
 .modIconText .icon-text-circle i:before {
   margin: 0;
 }
@@ -3282,19 +3286,38 @@ body {
 .modMilestone {
   text-align: center;
 }
+.whitehexagontop{
+	width: 0;
+	border-bottom: 30px solid white;
+	border-left: 49px solid transparent;
+	border-right: 49px solid transparent;
+	margin-left: auto;
+	margin-right: auto;
+}
 .modMilestone i {
-  font-size: 36px;
+  box-sizing: content-box;
+  font-size: 2.42857rem;
+  width: 38px;
+  height: 38px;
   color: #124468;
-  background: white;
-  width: 90px;
-  height: 90px;
-  -moz-border-radius: 45px;
-  -webkit-border-radius: 45px;
-  border-radius: 45px;
-  text-align: center;
-  padding: 27px;
+  border: none;
+  background-color: white;
   display: inline-block;
-  margin-bottom: 45px;
+  padding: 0px 30px;
+
+  -moz-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+.whitehexagonbottom{
+	width: 0;
+	margin-bottom: 2.5rem;
+	border-top: 30px solid white;
+	border-left: 49px solid transparent;
+	border-right: 49px solid transparent;
+	margin-left: auto;
+	margin-right: auto;
 }
 .modMilestone strong {
   font-size: 3.42857rem;
@@ -3899,7 +3922,7 @@ body {
 @media only screen and (max-width: 60em) {
   .modTeamMember .overlay {
     opacity: 1;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(18, 68, 104, 0.5);
     top: 0;
   }
   .modTeamMember .overlay .intro {
